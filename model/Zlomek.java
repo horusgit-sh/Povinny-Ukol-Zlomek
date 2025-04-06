@@ -48,7 +48,7 @@ public record Zlomek(int citatel, int jmenovatel) {
         return new Zlomek(citatel / a, jmenovatel / a);
     }
 
-    @Override
+
     public String toString() {
         return String.format("%d / %d", citatel, jmenovatel);
     }
