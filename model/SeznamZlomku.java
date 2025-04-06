@@ -49,6 +49,6 @@ public class SeznamZlomku {
 
     public Zlomek spoctiPrumer() {
         if (zlomky.isEmpty()) return new Zlomek(0, 1);
-        return new Zlomek(spoctiSoucet().getCitatel(), spoctiSoucet().getJmenovatel() * zlomky.size()).zkratit();
+        return new Zlomek(spoctiSoucet().citatel(), spoctiSoucet().jmenovatel() * zlomky.size()).zkratit();
     }
 }

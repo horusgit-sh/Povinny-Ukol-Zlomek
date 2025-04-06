@@ -1,23 +1,10 @@
 package model;
 
-public class Zlomek extends Number {
-    private final int citatel;
-    private final int jmenovatel;
-
-    public Zlomek(int citatel, int jmenovatel) {
+public record Zlomek(int citatel, int jmenovatel) {
+    public Zlomek {
         if (jmenovatel == 0) {
             throw new ArithmeticException("Jmenovatel nesmi byt 0!");
         }
-        this.citatel = citatel;
-        this.jmenovatel = jmenovatel;
-    }
-
-    public int getCitatel() {
-        return citatel;
-    }
-
-    public int getJmenovatel() {
-        return jmenovatel;
     }
 
 
@@ -66,22 +53,22 @@ public class Zlomek extends Number {
         return String.format("%d / %d", citatel, jmenovatel);
     }
 
-    @Override
+
     public int intValue() {
         return citatel / jmenovatel;
     }
 
-    @Override
+
     public long longValue() {
         return intValue();
     }
 
-    @Override
+
     public float floatValue() {
         return (float) doubleValue();
     }
 
-    @Override
+
     public double doubleValue() {
         return ((double) citatel) / jmenovatel;
     }
